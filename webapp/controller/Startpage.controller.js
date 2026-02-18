@@ -6,9 +6,9 @@ sap.ui.define([
 ], function (Controller, JSONModel, NumberFormat, formatMessage) {
 	"use strict";
 
-	return Controller.extend("sap.suite.ui.commons.demokit.tutorial.icecream.03.controller.Startpage", {
+	return Controller.extend("sap.suite.ui.commons.demokit.tutorial.icecream.05.controller.Startpage", {
 		onInit: function () {
-			var sDataPath = sap.ui.require.toUrl("sap/suite/ui/commons/demokit/tutorial/icecream/03/model/data") + "/News.json";
+			var sDataPath = sap.ui.require.toUrl("sap/suite/ui/commons/demokit/tutorial/icecream/05/model/data") + "/News.json";
 			var oModel = new JSONModel(sDataPath);
 			this.getView().setModel(oModel, "news");
 		},
@@ -42,6 +42,22 @@ sap.ui.define([
 		formatJSONDate: function (date) {
 			var oDate = new Date(Date.parse(date));
 			return oDate.toLocaleDateString();
+		},
+
+		onNavToProcessFlow: function () {
+			this.getRouter().navTo("processFlow");
+		},
+
+		onNavToChartContainer: function () {
+			this.getRouter().navTo("chartContainer");
+		},
+
+		onNavToReviews: function () {
+			this.getRouter().navTo("reviews");
+		},
+
+		getRouter: function () {
+			return this.getOwnerComponent().getRouter();
 		}
 	});
 });

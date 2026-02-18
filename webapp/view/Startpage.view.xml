@@ -1,5 +1,5 @@
 <mvc:View
-	controllerName="sap.suite.ui.commons.demokit.tutorial.icecream.04.controller.Startpage"
+	controllerName="sap.suite.ui.commons.demokit.tutorial.icecream.05.controller.Startpage"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m"
 	xmlns:layout="sap.ui.layout"
@@ -14,7 +14,8 @@
 				<GenericTile
 					class="sapUiTinyMarginBegin sapUiTinyMarginTop"
 					header="{i18n>startpagePFTileTitle}"
-					subheader="{i18n>startpagePFTileSubTitle}">
+					subheader="{i18n>startpagePFTileSubTitle}"
+					press=".onNavToProcessFlow">
 					<tileContent>
 						<TileContent>
 							<content>
@@ -92,7 +93,8 @@
 				<GenericTile
 					class="sapUiTinyMarginBegin sapUiTinyMarginTop"
 					header="{i18n>startpageTestResultsTileTitle}"
-					subheader="{i18n>startpageTestResultsTileSubTitle}">
+					subheader="{i18n>startpageTestResultsTileSubTitle}"
+					press=".onNavToChartContainer">
 					<tileContent>
 						<TileContent>
 							<content>
