@@ -1,5 +1,5 @@
 <mvc:View
-	controllerName="sap.suite.ui.commons.demokit.tutorial.icecream.02.controller.Startpage"
+	controllerName="sap.suite.ui.commons.demokit.tutorial.icecream.03.controller.Startpage"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m"
 	xmlns:layout="sap.ui.layout"
@@ -89,6 +89,41 @@
 						</TileContent>
 					</tileContent>
 				</GenericTile>
+				<GenericTile
+					class="sapUiTinyMarginBegin sapUiTinyMarginTop"
+					header="{i18n>startpageTestResultsTileTitle}"
+					subheader="{i18n>startpageTestResultsTileSubTitle}">
+					<tileContent>
+						<TileContent>
+							<content>
+								<ImageContent src="sap-icon://temperature"/>
+							</content>
+						</TileContent>
+					</tileContent>
+				</GenericTile>
+				<SlideTile
+					class="sapUiTinyMarginBegin sapUiTinyMarginTop"
+					tiles="{news>/News}">
+					<GenericTile
+						backgroundImage="{news>image}"
+						state="{news>state}"
+						frameType="TwoByOne">
+						<tileContent>
+							<TileContent
+								footer="{
+									path: 'news>date',
+									formatter: '.formatJSONDate'
+								}">
+								<content>
+									<NewsContent
+										contentText="{news>content}"
+										subheader="{news>subheader}">
+									</NewsContent>
+								</content>
+							</TileContent>
+						</tileContent>
+					</GenericTile>
+				</SlideTile>
 			</layout:HorizontalLayout>
 		</layout:VerticalLayout>
 	</Page>
