@@ -1,5 +1,5 @@
 <mvc:View
-	controllerName="sap.suite.ui.commons.demokit.tutorial.icecream.03.controller.Startpage"
+	controllerName="sap.suite.ui.commons.demokit.tutorial.icecream.04.controller.Startpage"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m"
 	xmlns:layout="sap.ui.layout"
@@ -124,6 +124,21 @@
 						</tileContent>
 					</GenericTile>
 				</SlideTile>
+			</layout:HorizontalLayout>
+			<Title
+				titleStyle="H2"
+				text="{i18n>startpageLinksGroupTitle}"
+				class="sapUiTinyMarginBegin sapUiMediumMarginTop"/>
+			<layout:HorizontalLayout allowWrapping="true">
+				<GenericTile
+					header="{i18n>startpageLineTile1Title}"
+					subheader="{i18n>startpageLineTile1SubTitle}"
+					mode="LineMode"
+					class="sapUiTinyMarginBegin"/>
+				<GenericTile
+					header="{i18n>startpageLineTile2Title}"
+					mode="LineMode"
+					class="sapUiTinyMarginBegin"/>
 			</layout:HorizontalLayout>
 		</layout:VerticalLayout>
 	</Page>
