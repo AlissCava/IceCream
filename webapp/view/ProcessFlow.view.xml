@@ -3,7 +3,7 @@
 	xmlns="sap.suite.ui.commons"
 	xmlns:m="sap.m"
 	xmlns:mc="sap.suite.ui.microchart"
-	controllerName="sap.suite.ui.commons.demokit.tutorial.icecream.10.controller.ProcessFlow">
+	controllerName="sap.suite.ui.commons.demokit.tutorial.icecream.11.controller.ProcessFlow">
 	<m:Page
 		title="{i18n>processFlowTitle}"
 		showNavButton="true"
@@ -141,6 +141,35 @@
 					</m:HeaderContainer>
 				</m:headerContainer>
 			</m:ObjectHeader>
+			<m:Panel headerText="{i18n>processFlowProcessTitle}">
+				<ProcessFlow
+					id="processflow1"
+					scrollable="false"
+					nodes="{process>/Nodes}"
+					lanes="{process>/Lanes}"
+					nodePress=".onNodePressed">
+					<nodes>
+						<ProcessFlowNode
+							laneId="{process>lane}"
+							nodeId="{process>id}"
+							title="{process>title}"
+							titleAbbreviation="{process>titleAbbreviation}"
+							children="{process>children}"
+							state="{process>state}"
+							stateText="{process>stateText}"
+							texts="{process>texts}"
+							highlighted="{process>highlighted}"
+							focused="{process>focused}"/>
+					</nodes>
+					<lanes>
+						<ProcessFlowLaneHeader
+							laneId="{process>id}"
+							iconSrc="{process>icon}"
+							text="{process>label}"
+							position="{process>position}"/>
+					</lanes>
+				</ProcessFlow>
+			</m:Panel>
 		</m:content>
 	</m:Page>
 </mvc:View>
