@@ -3,7 +3,7 @@
 	xmlns="sap.suite.ui.commons"
 	xmlns:m="sap.m"
 	xmlns:mc="sap.suite.ui.microchart"
-	controllerName="sap.suite.ui.commons.demokit.tutorial.icecream.08.controller.ProcessFlow">
+	controllerName="sap.suite.ui.commons.demokit.tutorial.icecream.09.controller.ProcessFlow">
 	<m:Page
 		title="{i18n>processFlowTitle}"
 		showNavButton="true"
@@ -66,6 +66,41 @@
 											color="{suppliers>deliveryTimeSemantics}"/>
 									</mc:data>
 								</mc:ComparisonMicroChart>
+							</m:FlexBox>
+						</m:FlexBox>
+						<m:FlexBox
+							width="12rem"
+							height="10rem"
+							alignItems="Center"
+							justifyContent="Center"
+							direction="Column">
+							<m:Title
+								text="{
+									parts: [
+									'i18n>processFlowChartsProductionTime',
+									'business>/timeMeasure'
+									],
+									formatter: '.formatMessage'
+								}"
+								class="sapUiSmallMargin"/>
+							<m:FlexBox width="12rem" height="6rem" renderType="Bare">
+								<mc:DeltaMicroChart
+									size="Responsive"
+									color="{business>/productionTimeComparisonCriticality}"
+									value1="{business>/expectedProductionTime}"
+									value2="{business>/currentProductionTime}"
+									title1="{i18n>processFlowChartsExpected}"
+									title2="{i18n>processFlowChartsCurrent}"
+									displayValue1="{business>/expectedProductionTime}"
+									displayValue2="{business>/currentProductionTime}"
+									deltaDisplayValue="{
+										parts: [
+										'business>/expectedProductionTime',
+										'business>/currentProductionTime'
+										],
+										formatter: '.getValuesDelta'
+									}"
+								/>
 							</m:FlexBox>
 						</m:FlexBox>
 					</m:HeaderContainer>
